@@ -1,0 +1,39 @@
+<html>
+
+<p>String_1:</p><input type="text" id="value1" value="12"/> <br/>
+<p>String_2:</p><input type="text" id="value2" value="123"/> <br/>
+<p>String_3:</p><input type="text" id="value3" value="1234"/> <br/>
+<p>String_4:</p><input type="text" id="value4" value="12345" /> <br/>
+<input type="button" value="Start" name="Start" OnClick="vowelsNumber();">
+<p id="result"></p>
+</html>
+
+
+
+
+<script>
+	function vowelsNumber() {
+    let str1 = document.getElementById('value1').value;
+    let str2 = document.getElementById('value2').value;
+    let str3 = document.getElementById('value3').value;
+    let str4 = document.getElementById('value4').value;
+    let Results;
+let arr = [str1, str2, str3, str4];
+let summar = [];
+let str = [];
+     // перебираем строки и считаем длину
+        for (let i = 0; i < arr.length; ++i){
+            summar[i] = arr[i].length;
+        }
+        // сортируем в порядке убывания длины;
+        let x =  summar.sort(function (a, b) {
+            return b - a;
+        });
+
+
+console.log(arr[0].length );
+console.log(summar[0]);
+console.log(str);
+document.getElementById('result').textContent = Results;
+	} 
+</script>
